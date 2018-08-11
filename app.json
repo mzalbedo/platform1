@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/shop/shop",
+    "pages/mail/mail",
+    "pages/person/person"
+    
+  ],
+  "window": {
+
+    		"navigationBarBackgroundColor": "#1066FF",
+		"navigationBarTextStyle": "white",
+		"backgroundColor": "#efefef",
+		"backgroundTextStyle": "dark",
+		"navigationBarTitleText": "交通二手市场"
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "color": "#1FD453",
+    "selectedColor": "#456745",
+    "backgroundColor": "#d9e3c3",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/img-index/home_2.png",
+        "selectedIconPath": "images/img-index/home_1.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "跳蚤市场",
+        "iconPath": "images/img-shop/classic.png",
+        "selectedIconPath": "images/img-shop/classic@highlight.png"
+      },
+      {
+        "pagePath": "pages/mail/mail",
+        "text": "取快递",
+        "iconPath": "images/img-mail/book.png",
+        "selectedIconPath": "images/img-mail/book@highlight.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "个人",
+        "iconPath": "images/img-person/mine_2.png",
+        "selectedIconPath": "images/img-person/mine_1.png"
+      }
+    ]
+  }
+}
