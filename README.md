@@ -24,3 +24,10 @@
 1、在shop中搭建框架
 2、在app.wxss中编写样式
 3、在shop.js编写模拟数据
+
+
+2018-8-16
+添加封装 
+--加入config.js 并且如果全局API 地址和APPkey
+--在utils下util.js对wx.request方法封装成utils的函数     
+  注意：一般一个类下的函数成为方法   自定义不在类内称函数  可以认为是一个东西。
