@@ -1,2 +1,23 @@
 <!--pages/shop/shop.wxml-->
-<text>pages/shop/shop.wxml</text>
+<!-- <text>pages/shop/shop.wxml</text> -->
+<!-- 导入Item模板 -->
+<import src="../public/item.wxml"/>
+
+<view class="row-container">
+    <navigator class="header">
+      <view class="left">
+        <view class="bilibili-index-sprite bilibili-index-live"></view>
+        <text>时间排序</text>
+      </view>
+      <view class="right">
+        <text>价格排序</text>
+        <view class="bilibili-index-sprite bilibili-index-arrow"></view>
+      </view>
+    </navigator>
+    <view class="content-wrapper">
+      <block wx:for="{{liveList}}" wx:key="avid">
+        <!-- 使用正在直播模板，传入当前循环对象item -->
+        <template is="jiefItem2" data="{{...item}}"/>
+      </block>
+    </view>
+  </view>

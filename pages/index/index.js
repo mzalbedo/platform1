@@ -7,19 +7,19 @@ Page({
     banners: [
       {
         id: 3,
-        img: "/images/images/post/vr.png",
+        img: "/images/images/1.png",
         url: 'http://up.mcyt.net/?down/45768.mp3',
         name: '曖昧ナ希望/氷雨 - 帆足圭吾'
       },
       {
         id: 1,
-        img: '/images/images/post/bl.png',
+        img: '/images/images/2.png',
         url: 'http://up.mcyt.net/?down/41218.mp3',
         name: '泡沫 哀のまほろば'
       },
       {
         id: 2,
-        img: '/images/images/post/timg.png',
+        img: '/images/images/3.png',
         url: 'http://up.mcyt.net/?down/41218.mp3',
         name: '泡沫 哀のまほろば'
       }
@@ -29,31 +29,31 @@ Page({
         {
           id: 1,
           img: '/images/img-index/index/icon_1.jpg',
-          name: '食堂',
+          name: '闲置数码',
           url: ''
         },
         {
           id: 2,
           img: '/images/img-index/index/icon_2.jpg',
-          name: '超市',
+          name: '学习用具',
           url: ''
         },
         {
           id: 3,
           img: '/images/img-index/index/icon_3.jpg',
-          name: '社团',
+          name: '书集',
           url: ''
         },
         {
           id: 4,
           img: '/images/img-index/index/icon_4.jpg',
-          name: '发现',
+          name: '宿舍电器',
           url: ''
         },
         {
           id: 5,
           img: '/images/img-index/index/icon_5.jpg',
-          name: '图书馆',
+          name: '玩偶',
           url: ''
         },
         {
@@ -186,7 +186,7 @@ Page({
   },
   tiao: function () {
     wx: wx.navigateTo({       //可以返回
-      url: '/page/index/ddd',
+      url: '/pages/index/ddd',
       success: function (res) { },
       fail: function (res) { },
       complete: function (res) { },
