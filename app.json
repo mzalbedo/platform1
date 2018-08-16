@@ -3,12 +3,13 @@
     "pages/index/index",
     "pages/shop/shop",
     "pages/mail/mail",
-    "pages/person/person"
+    "pages/person/person",
+    "pages/index/ddd"
     
   ],
   "window": {
 
-    		"navigationBarBackgroundColor": "#1066FF",
+    "navigationBarBackgroundColor": "#1066FF",
 		"navigationBarTextStyle": "white",
 		"backgroundColor": "#efefef",
 		"backgroundTextStyle": "dark",
