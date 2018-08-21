@@ -1,3 +1,5 @@
+const AV=require('../../utils/av-weapp-min.js');
+
 // pages/person/person.js
 Page({
 
