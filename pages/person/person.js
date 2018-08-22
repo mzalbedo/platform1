@@ -1,5 +1,5 @@
-const AV=require('../../utils/av-weapp-min.js');
-
+const AV = require('../../utils/av-weapp-min.js');
+const Todo = require('../../model/todo.js');
 // pages/person/person.js
 Page({
 
@@ -7,62 +7,31 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    draft:"",
+    todos:[],
+    
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
+  onReady:function(){
+    console.log("onReady is start");
+    new AV.Query(Todo).find().then(todos => this.setData({ todos}).catch(console.error));
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
+  updateDraft: function({
+    detail: {
+      value
+    }
+  }) {
+    console.log('updtaeDraft');
+    console.log(value);
+    this.setData({
+      draft: value
+    });
+    //注意这里帮定数据要一定月wxml 一样 否则输入框里的值回不来
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
+  addTodo: function() {
+    console.log('addTodo');
+    new Todo({
+      content: this.data.draft,
+      done: false,
+    }).save().then(console.log).catch(console.error);
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
 })

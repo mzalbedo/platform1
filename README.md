@@ -49,3 +49,12 @@
 ===============
 创建一个文件av-weapp-min.js  是一个配置文件 //为连接网路服务器做准备
 创建一个文件av-live-query-weapp-min.js 实时更新功能
+
+2018-8-22
+建立网络服务器并且能够在网路服务器上添加数据  
+花费大约几个点 毛病在于todo.js下文件 AV.Object.register(Todo);写成了AV.Object.reqister(Todo);注意写法
+====================================================
+暂时屏蔽掉了 server.js这个文件里所以代码  和  屏蔽掉了 inde.js下148行// address: res.data.result.address_component.street_number
+消除了错误  以后用上的时候再改回来
+====================================================
+通过new AV.Query(Todo).find().then(todos => this.setData({ todos}).catch(console.error));方法完成了查询并显示在下面

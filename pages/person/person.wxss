@@ -1,1 +1,26 @@
 /* pages/person/person.wxss */
+
+.flex-werp {
+  display: inline-flex;
+  flex-direction: row;
+  height: 100rpx;
+   width: 400rpx;
+  
+}
+
+.flex-werp header {
+ text-align: center;
+}
+
+.add {
+  background-color: greenyellow;
+  height: 100rpx;
+  width: 140rpx;
+  text-align: center;
+}
+
+.add tappable {
+  
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 12px;
+}

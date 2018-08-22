@@ -1,3 +1,14 @@
+//const AV = require('./libs/av-weapp-min.js');
+const AV=require("/utils/av-weapp-min.js");
+
+//初始化 id 和 key  这个俩个跟网路服务气有关 没了服务器项目有唯一的id和key
+AV.init({
+  appId: 'wII1QlmcVtP8TeRKa8AqFxpT-gzGzoHsz',
+  appKey: 'iAN0ahWpO1kyNOJELpeMLgMB',
+});
+
+console.log(AV);
+
 //app.js
 App({
   onLaunch: function () {
@@ -37,3 +48,5 @@ App({
     userInfo: null
   }
 })
+
+
