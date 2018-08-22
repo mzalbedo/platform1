@@ -1,5 +1,5 @@
 //const AV = require('./libs/av-weapp-min.js');
-const AV=require("/utils/av-weapp-min.js");
+const AV = require("/utils/av-weapp-min.js");
 
 //初始化 id 和 key  这个俩个跟网路服务气有关 没了服务器项目有唯一的id和key
 AV.init({
@@ -11,7 +11,18 @@ console.log(AV);
 
 //app.js
 App({
-  onLaunch: function () {
+
+  onLoad: function() {
+    //用户系统 即用用户信息登陆 前提在服务器上写上自己的  AppID和AppSecret
+    AV.User.loginWithWeapp().then(user => {
+      this.globalData.user = user.toJSON();
+    }).catch(console.error);
+
+  },
+
+  onLaunch: function() {
+
+
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -48,5 +59,3 @@ App({
     userInfo: null
   }
 })
-
-

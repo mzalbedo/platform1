@@ -7,21 +7,28 @@ Page({
    * 页面的初始数据
    */
   data: {
-    draft:"",
-    todos:[],
-    
+    draft: "",
+    todos: [],
+
   },
-  onReady:function(){
+  onReady: function() {
+
+
+    //从服务器查询
     console.log("onReady is start");
-    new AV.Query(Todo).find().then(todos => this.setData({ todos}).catch(console.error));
+    new AV.Query(Todo).find().then(todos => this.setData({
+      todos
+    }).catch(console.error));
   },
   updateDraft: function({
     detail: {
       value
     }
   }) {
-    console.log('updtaeDraft');
-    console.log(value);
+    //测试
+    // console.log('updtaeDraft');
+    //console.log(value);
+
     this.setData({
       draft: value
     });
@@ -29,9 +36,36 @@ Page({
   },
   addTodo: function() {
     console.log('addTodo');
-    new Todo({
+    // 查看用户登陆状态
+    console.log(AV.User.current());
+
+    //向服务器添加数据
+    const todo = new Todo({
       content: this.data.draft,
       done: false,
-    }).save().then(console.log).catch(console.error);
+    });
+    //设置ACL 建立用户系统 这里设置权限 让不同人看到自己写的东西
+    const acl = new AV.ACL();
+    acl.setPublicReadAccess(false);
+    acl.setPublicWriteAccess(false);
+    acl.setReadAccess(AV.User.current(), true);
+    acl.setWriteAccess(AV.User.current(), true);
+    //ACL连接到todo
+    todo.setACL(acl);
+    //添加到网络服务器
+    //添加刷新功能
+    todo.save().then(
+      todo => {
+        this.setData({
+          todos: [...this.data.todos, todo],
+          //输入框置空
+          draft: "",
+        });
+
+      },
+
+
+
+    ).catch(console.error);
   },
 })
