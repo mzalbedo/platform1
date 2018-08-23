@@ -5,7 +5,7 @@
 			{{address}}
 		</view>
 		<view class="search" bindtap="tapSearch">
-			<image class="icon" src="/imgs/index/icon_search.png"/>
+			<image class="icon" src="/images/img-index/index/icon_search.png"/>
 			<i class="fa fa-home"></i>
 			烤鸭
 		</view>
@@ -30,17 +30,17 @@
 
 		<view class="section section-big discount">
 			<view class="title">优惠专区</view>
-			<image class="content" bindtap="toNearby" src="/images/post/d.jpg"/>
+			<image class="content" bindtap="toNearby" src="/images/img-index/post/d.jpg"/>
 		</view>
 
 		<view class="section section-big preferred">
 			<view class="title">为你优选</view>
-			<image class="content" bindtap="toNearby" src="/images/post/e.jpg"/>
+			<image class="content" bindtap="toNearby" src="/images/img-index/post/e.jpg"/>
 		</view>
 
 		<view class="section section-big special">
 			<view class="title">特色频道</view>
-			<image class="content" bindtap="toNearby" src="/images/post/f.jpg"/>
+			<image class="content" bindtap="toNearby" src="/images/img-index/post/f.jpg"/>
 		</view>
 
 		<view id="nearby" class="section section-big nearby">

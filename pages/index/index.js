@@ -145,7 +145,7 @@ Page({
           console.log(res)
           if (res.data.status != -1) {
             self.setData({
-              address: res.data.result.address_component.street_number
+             // address: res.data.result.address_component.street_number
             });
           } else {
             self.setData({

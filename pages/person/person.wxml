@@ -1,2 +1,15 @@
-<!--pages/person/person.wxml-->
-<text>pages/person/person.wxml</text>
+<view class='flex-werp header'>
+   <input placeholder='添加一个任务'
+         bindinput='updateDraft'
+         value='{{draft}}'
+         class='new-todo'
+   />
+   <text class='add tappable' ontap="addTodo">添加</text> 
+   
+</view>
+
+<block wx:for="{{todos}}" wx:for-item="todo" wx:key="objectId">
+     <view>
+       | {{todo.done}}|{{todo.content}}|
+     </view>  
+   </block>

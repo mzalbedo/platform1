@@ -12,7 +12,7 @@ function __args() {
     }
   }
   if (setting.url.indexOf('https://') !== 0) {
-    setting.url = 'https://wxapp.im20.com.cn' + setting.url;
+    setting.url = 'https://www.baidu.com' + setting.url;
   }
   return setting;
 }
